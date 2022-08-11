@@ -12,8 +12,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2A1F9A8932406309E4D07B22 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C861F2E5B775A652D740F5B /* ExpoModulesProvider.swift */; };
 		7699B88040F8A987B510C191 /* libPods-imageProcessing-imageProcessingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-imageProcessing-imageProcessingTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F725D279AEEE2DA04837B6D9 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33F22F2418419053AB6CBD8 /* ExpoModulesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +39,14 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = imageProcessing/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = imageProcessing/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-imageProcessing-imageProcessingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-imageProcessing-imageProcessingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C861F2E5B775A652D740F5B /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-imageProcessing-imageProcessingTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-imageProcessing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imageProcessing.debug.xcconfig"; path = "Target Support Files/Pods-imageProcessing/Pods-imageProcessing.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-imageProcessing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imageProcessing.release.xcconfig"; path = "Target Support Files/Pods-imageProcessing/Pods-imageProcessing.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-imageProcessing-imageProcessingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imageProcessing-imageProcessingTests.debug.xcconfig"; path = "Target Support Files/Pods-imageProcessing-imageProcessingTests/Pods-imageProcessing-imageProcessingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-imageProcessing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-imageProcessing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = imageProcessing/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-imageProcessing-imageProcessingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imageProcessing-imageProcessingTests.release.xcconfig"; path = "Target Support Files/Pods-imageProcessing-imageProcessingTests/Pods-imageProcessing-imageProcessingTests.release.xcconfig"; sourceTree = "<group>"; };
+		B33F22F2418419053AB6CBD8 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-imageProcessing/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -96,6 +100,15 @@
 			name = imageProcessing;
 			sourceTree = "<group>";
 		};
+		2A16489865C60C79B57E5E45 /* ExpoModulesProviders */ = {
+			isa = PBXGroup;
+			children = (
+				ED3A354FA332381CBFF1E5E2 /* imageProcessing */,
+				F18CDE0447C6C9EE86602DFF /* imageProcessingTests */,
+			);
+			name = ExpoModulesProviders;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +135,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				2A16489865C60C79B57E5E45 /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -146,6 +160,22 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-imageProcessing-imageProcessingTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		ED3A354FA332381CBFF1E5E2 /* imageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				B33F22F2418419053AB6CBD8 /* ExpoModulesProvider.swift */,
+			);
+			name = imageProcessing;
+			sourceTree = "<group>";
+		};
+		F18CDE0447C6C9EE86602DFF /* imageProcessingTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C861F2E5B775A652D740F5B /* ExpoModulesProvider.swift */,
+			);
+			name = imageProcessingTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* imageProcessingTests.m in Sources */,
+				2A1F9A8932406309E4D07B22 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +445,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				F725D279AEEE2DA04837B6D9 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +481,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/imageProcessing.app/imageProcessing";
@@ -473,6 +506,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/imageProcessing.app/imageProcessing";
@@ -497,6 +531,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = imageProcessing;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -522,6 +557,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = imageProcessing;
 				SWIFT_VERSION = 5.0;
