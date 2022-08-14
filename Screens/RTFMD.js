@@ -57,7 +57,6 @@ export const RTFMD = () => {
       ctx.strokeStyle = 'green';
       ctx.fillStyle = 'green';
       ctx.lineWidth = 1;
-      ctx.font = '30px Verdana';
 
       context.current = ctx;
       canvas.current = can;
