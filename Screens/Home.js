@@ -15,6 +15,10 @@ const screens = [
     name: 'Real Time Hand Detection',
     screen: 'RTHD',
   },
+  {
+    name: 'Real time face Mesh Detection',
+    screen: 'RTFMD',
+  },
 ];
 
 export const Home = () => {
