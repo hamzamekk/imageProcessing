@@ -11,6 +11,10 @@ const screens = [
     name: 'Real Time Text Detection',
     screen: 'RTTD',
   },
+  {
+    name: 'Real Time Hand Detection',
+    screen: 'RTHD',
+  },
 ];
 
 export const Home = () => {

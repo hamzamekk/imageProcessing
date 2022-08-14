@@ -1,184 +1,3 @@
-// // import React, {useEffect, useRef, useState} from 'react';
-// // import {
-// //   ActivityIndicator,
-// //   LogBox,
-// //   Platform,
-// //   Text,
-// //   useWindowDimensions,
-// //   View,
-// // } from 'react-native';
-// // import SVG, {Circle, Line, Path} from 'react-native-svg';
-
-// // import * as tf from '@tensorflow/tfjs';
-// // import * as handPoseDetection from '@tensorflow-models/hand-pose-detection';
-// // import '@tensorflow/tfjs-core';
-// // import '@tensorflow/tfjs-backend-webgl';
-// // import '@tensorflow/tfjs-react-native/dist/platform_react_native';
-// // import {cameraWithTensors} from '@tensorflow/tfjs-react-native';
-// // import {Camera} from 'expo-camera';
-// // import Canvas from 'react-native-canvas';
-
-// // const TensorCamera = cameraWithTensors(Camera);
-
-// // LogBox.ignoreAllLogs();
-
-// // const textureDims =
-// //   Platform.OS === 'ios'
-// //     ? {
-// //         height: 1920,
-// //         width: 1080,
-// //       }
-// //     : {
-// //         height: 1200,
-// //         width: 1600,
-// //       };
-
-// // const App = () => {
-// //   const [mod, setMod] = useState(null);
-// //   const [data, setData] = useState([]);
-
-// //   const {width, height} = useWindowDimensions();
-
-// //   let context = useRef();
-// //   let canvas = useRef();
-
-// //   useEffect(() => {
-// //     (async () => {
-// //       await tf.ready();
-
-// //       const model = handPoseDetection.SupportedModels.MediaPipeHands;
-// //       const detectorConfig = {
-// //         runtime: 'tfjs',
-// //       };
-// //       const detector = await handPoseDetection.createDetector(
-// //         model,
-// //         detectorConfig,
-// //       );
-// //       setMod(detector);
-// //     })();
-// //   }, []);
-
-// //   const handleCameraStream = (images, updatePreview, gl) => {
-// //     const loop = async () => {
-// //       const nextImageTensor = images.next().value;
-
-// //       const hands = await mod.estimateHands(nextImageTensor);
-
-// //       const data = [];
-
-// //       hands.map(item => {
-// //         // console.log(item.keypoints);
-// //         item.keypoints.map(key => data.push(key));
-// //       });
-
-// //       drawHand(data, nextImageTensor);
-
-// //       tf.dispose([nextImageTensor]);
-
-// //       // net.dispose();
-// //       updatePreview();
-// //       gl.endFrameEXP();
-
-// //       requestAnimationFrame(loop);
-// //     };
-// //     loop();
-// //   };
-
-// //   if (!mod) {
-// //     return (
-// //       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-// //         <Text>LOADING ...</Text>
-// //         <ActivityIndicator />
-// //       </View>
-// //     );
-// //   }
-
-// //   const drawHand = (predictions, nextImageTensor) => {
-// //     context.current.clearRect(0, 0, width, height);
-
-// //     const scaleWidth = width / nextImageTensor.shape[1];
-// //     const scaleHeight = height / nextImageTensor.shape[0];
-
-// //     context.current.beginPath();
-// //     context.current.moveTo(
-// //       predictions[0]?.x * scaleWidth,
-// //       predictions[0]?.y * scaleHeight,
-// //     );
-// //     for (let i = 1; i < predictions.length; i++) {
-// //       context.current.lineTo(
-// //         predictions[i].x * scaleWidth,
-// //         predictions[i].y * scaleHeight,
-// //       );
-// //     }
-
-// //     // context.current.lineWidth = width;
-// //     context.current.stroke();
-
-// //     predictions.forEach(prediction => {
-// //       context.current.beginPath();
-// //       context.current.arc(
-// //         prediction.x * scaleWidth,
-// //         prediction.y * scaleHeight,
-// //         (scaleHeight / scaleWidth) * 2,
-// //         0,
-// //         2 * Math.PI,
-// //       );
-// //       context.current.closePath();
-// //       context.current.fillStyle = 'aqua';
-// //       context.current.fill();
-// //     });
-// //   };
-
-// //   const hadleCanvas = async can => {
-// //     if (can) {
-// //       can.width = width;
-// //       can.height = height;
-// //       const ctx = can.getContext('2d');
-// //       ctx.strokeStyle = 'green';
-// //       ctx.fillStyle = 'green';
-// //       ctx.lineWidth = 1;
-// //       ctx.font = '30px Verdana';
-
-// //       context.current = ctx;
-// //       canvas.current = can;
-// //     }
-// //   };
-
-// //   console.log(data);
-
-// //   return (
-// //     <View style={{flex: 1, backgroundColor: 'white'}}>
-// //       <TensorCamera
-// //         // Standard Camera props
-// //         style={{flex: 1}}
-// //         type={Camera.Constants.Type.back}
-// //         // Tensor related props
-// //         cameraTextureHeight={textureDims.height}
-// //         cameraTextureWidth={textureDims.width}
-// //         useCustomShadersToResize={false}
-// //         resizeHeight={200}
-// //         resizeWidth={152}
-// //         resizeDepth={3}
-// //         onReady={handleCameraStream}
-// //         // rotation={90}
-// //         autorender={false}
-// //       />
-// //       <Canvas
-// //         style={{
-// //           position: 'absolute',
-// //           width: '100%',
-// //           height: '100%',
-// //           zIndex: 100,
-// //           transform: [{scaleX: -1}],
-// //         }}
-// //         ref={hadleCanvas}
-// //       />
-// //     </View>
-// //   );
-// // };
-
-// // export default App;
-
 // import React, {useEffect, useRef, useState} from 'react';
 // import {
 //   View,
@@ -460,7 +279,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import {View, Text} from 'react-native';
-import {Home, RTOD, RTTD} from './Screens';
+import {Home, RTHD, RTOD, RTTD} from './Screens';
 
 const Stack = createNativeStackNavigator();
 
@@ -479,6 +298,11 @@ export const App = () => {
             name="RTTD"
             component={RTTD}
             options={{title: 'Real Time Text detection'}}
+          />
+          <Stack.Screen
+            name="RTHD"
+            component={RTHD}
+            options={{title: 'Real Time hand detection'}}
           />
         </Stack.Navigator>
       </NavigationContainer>
