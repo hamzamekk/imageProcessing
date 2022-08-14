@@ -7,6 +7,10 @@ const screens = [
     name: 'Real Time Object Detections',
     screen: 'RTOD',
   },
+  {
+    name: 'Real Time Text Detection',
+    screen: 'RTTD',
+  },
 ];
 
 export const Home = () => {
